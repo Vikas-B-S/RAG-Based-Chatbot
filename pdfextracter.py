@@ -2,7 +2,7 @@
 from pypdf import PdfReader
 import io
 
-def extract_text_from_pdf(file):
+def text_extractor_pdf(file):
         # Ensure a seekable BytesIO stream
     text = ""
     try:

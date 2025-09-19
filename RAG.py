@@ -36,7 +36,7 @@ st.markdown(tips)
 
 # Load PDF in Side Bar
 st.sidebar.title(':orange[UPLOAD YOUR DOCUMENT HERE (PDF Only)]')
-file_uploaded = st.sidebar.file_uploader('Upload File',accept_multiple_files=True,type=['pdf'])
+file_uploaded = st.sidebar.file_uploader('Upload File',accept_multiple_files=False,type=['pdf'])
 if file_uploaded:
     file_text = text_extractor_pdf(file_uploaded)
     # Step 1: Configure the models
