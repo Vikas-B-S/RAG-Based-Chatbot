@@ -11,7 +11,7 @@ from pdfextracter import text_extractor_pdf
 # Create the main page
 st.title(':green[RAG Based CHATBOT]')
 tips = """
-### How to Use This RAG Chatbot  
+### How to use this RAG Chatbot  
 
 Welcome! Follow these steps to get started:  
 
@@ -36,7 +36,7 @@ st.markdown(tips)
 
 # Load PDF in Side Bar
 st.sidebar.title(':orange[UPLOAD YOUR DOCUMENT HERE (PDF Only)]')
-file_uploaded = st.sidebar.file_uploader('Upload File')
+file_uploaded = st.sidebar.file_uploader('Upload File',accept_multiple_files=True,type=['pdf'])
 if file_uploaded:
     file_text = text_extractor_pdf(file_uploaded)
     # Step 1: Configure the models
