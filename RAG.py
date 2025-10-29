@@ -62,7 +62,7 @@ if file_uploaded:
     # Lets create a function that takes query and return the generated text
     def generate_response(query):
         # Step 6 : Retrieval (R)
-        retrived_docs = retriever.get_relevant_documents(query=query)
+        retrived_docs = retriever.invoke(query)
         context = ' '.join([doc.page_content for doc in retrived_docs])
 
         # Step 7: Write a Augmeneted prompt (A)
