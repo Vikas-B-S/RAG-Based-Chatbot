@@ -1,8 +1,8 @@
 import os
 import google.generativeai as genai
-from langchain.vectorstores import FAISS  # This will be the vector database
+from langchain_community.vectorstores import FAISS  # This will be the vector database
 from langchain_community.embeddings import HuggingFaceEmbeddings # To perform word embeddings
-from langchain.text_splitter import RecursiveCharacterTextSplitter # This for chunking
+from langchain_text_splitters import RecursiveCharacterTextSplitter # This for chunking
 from pypdf import PdfReader
 import faiss
 import streamlit as st
